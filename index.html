@@ -5,22 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CSS\Styling.css">
     <title>Best Tutoring</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
 </head>
 <body>
     <main>
-        <nav>
+        <nav class="navbar">
+        <img src="Assets\Images\logo.png" alt="brand logo" width="20%">
             <ul class="nav-list">                               
                 <li><a href="index.html">Home</a></li>
-                <li><a href="Subjects.html">Subjects</a></li> 
-                <li><a href="About Us.html">About Us</a></li>
-                <li><a href="Contact Us.html">Contact Us</a></li>
-                <li><a href="Login.html">Login</a></li>
-                <li><a href="Registration.html">Register</a></li>  
+                <li><a href="Pages\Subjects.html">Subjects</a></li> 
+                <li><a href="Pages\About Us.html">About Us</a></li>
+                <li><a href="Pages\Contact Us.html">Contact Us</a></li>
+                <li><a href="Pages\Login.html">Login</a></li>
+                <li><a href="Pages\Registration.html">Register</a></li>  
             </ul> 
         </nav>
-            <img src="Assets\Images\first bg image.jpg" alt="Teaching backgruond image" class="imageclass">
-            <h1>Learn from the best educators</h1>
-        <section>
+        <div class="hero">
+            <img src="Assets\Images\first bg image.jpg" alt="Teaching backgruond image">
+            <h1 class="hidden">Unlock Your Potential<br> One Lesson at a Time</h1>
+            <p class="hidden">Connect with top tutors and take your learning to the next level. Flexible scheduling, expert instructors, and a learning experience tailored to your needs – book now and get started!</p>
+        </div>
+        <section class="hidden">
             <h2>Choose you subject</h2>
             <nav>
                 <ul>
@@ -32,7 +40,8 @@
                     <li><a href=Subjects.html>Browse more</a></li>
                 </ul>
             </nav>
-            <section>
+        </section>
+            <section class="hidden">
                 <h1>Testimonials</h1>
                 <aside>
                     <h2>Name</h2>
@@ -47,11 +56,11 @@
                     <p>Review</p>
                 </aside>
             </section>
-            <section>
+            <section class="hidden">
                 <h1>Pricing</h1>
                 <p>Get quality tutoring for as low as ... pounds per hour</p>
             </section>
-        </section>
+        </main>
         <footer>
             <aside>
                 <img src="" alt="company logo">
@@ -66,6 +75,6 @@
                 </ul>
             </aside>
         </footer>
-        </main>
+        <script src="JS\Scripting.js"></script>
 </body>
 </html>
