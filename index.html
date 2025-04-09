@@ -1,80 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="CSS\Styling.css">
-    <title>Best Tutoring</title>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="CSS/Styling.css"/>
+  <title>Best Tutoring</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet"/>
 </head>
 <body>
-    <main>
-        <nav class="navbar">
-        <img src="Assets\Images\logo.png" alt="brand logo" width="20%">
-            <ul class="nav-list">                               
-                <li><a href="index.html">Home</a></li>
-                <li><a href="Pages\Subjects.html">Subjects</a></li> 
-                <li><a href="Pages\About Us.html">About Us</a></li>
-                <li><a href="Pages\Contact Us.html">Contact Us</a></li>
-                <li><a href="Pages\Login.html">Login</a></li>
-                <li><a href="Pages\Registration.html">Register</a></li>  
-            </ul> 
-        </nav>
-        <div class="hero">
-            <img src="Assets\Images\first bg image.jpg" alt="Teaching backgruond image">
-            <h1 class="hidden">Unlock Your Potential<br> One Lesson at a Time</h1>
-            <p class="hidden">Connect with top tutors and take your learning to the next level. Flexible scheduling, expert instructors, and a learning experience tailored to your needs – book now and get started!</p>
-        </div>
-        <section class="hidden">
-            <h2>Choose you subject</h2>
-            <nav>
-                <ul>
-                    <li><a href=Subjects.html#English>English</a></li>
-                    <li><a href=Subjects.html#Mathematics>Mathematics</a></li>
-                    <li><a href=Subjects.html#Physics>Physics</a></li>
-                    <li><a href=Subjects.html#Computer>Computer</a></li>
-                    <li><a href=Subjects.html#Chemistry>Chemistry</a></li>
-                    <li><a href=Subjects.html>Browse more</a></li>
-                </ul>
-            </nav>
-        </section>
-            <section class="hidden">
-                <h1>Testimonials</h1>
-                <aside>
-                    <h2>Name</h2>
-                    <p>Review</p>
-                </aside>
-                <aside>
-                    <h2>Name</h2>
-                    <p>Review</p>
-                </aside>
-                <aside>
-                    <h2>Name</h2>
-                    <p>Review</p>
-                </aside>
-            </section>
-            <section class="hidden">
-                <h1>Pricing</h1>
-                <p>Get quality tutoring for as low as ... pounds per hour</p>
-            </section>
-        </main>
-        <footer>
-            <aside>
-                <img src="" alt="company logo">
-                <p>Description for future</p>
-            </aside>
-            <aside>
-                <h3>Useful links</h3>
-                <ul>
-                    <li><a href="Subjects.html">Subjects</a></li>
-                    <li><a href="About Us.html">About Us</a></li>
-                    <li><a href="Contact Us.html">Contact Us</a></li>
-                </ul>
-            </aside>
-        </footer>
-        <script src="JS\Scripting.js"></script>
+  <main>
+    <nav class="navbar">
+      <img src="Assets/Images/logo.png" alt="brand logo" width="120" />
+      <ul class="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="Pages/Subjects.html">Subjects</a></li>
+        <li><a href="Pages/About Us.html">About Us</a></li>
+        <li><a href="Pages/Contact Us.html">Contact Us</a></li>
+        <li><a href="Pages/Login.html">Login</a></li>
+        <li><a href="Pages/Registration.html">Register</a></li>
+      </ul>
+    </nav>
+
+    <div class="hero">
+      <img src="Assets/Images/first bg image.jpg" alt="Teaching background image" />
+      <div class="hero-text">
+        <h1 class="hidden">Unlock Your Potential<br />One Lesson at a Time</h1>
+        <p class="hidden">Connect with top tutors and take your learning to the next level. Flexible scheduling, expert instructors, and a learning experience tailored to your needs – book now and get started!</p>
+      </div>
+    </div>
+
+    <section class="hidden">
+      <h2>Choose Your Subject</h2>
+      <nav class="subject-bar">
+        <ul class="subject-list">
+          <li><a href="Subjects.html#English">English</a></li>
+          <li><a href="Subjects.html#Mathematics">Mathematics</a></li>
+          <li><a href="Subjects.html#Physics">Physics</a></li>
+          <li><a href="Subjects.html#Computer">Computer</a></li>
+          <li><a href="Subjects.html#Chemistry">Chemistry</a></li>
+          <li><a href="Subjects.html">Browse More</a></li>
+        </ul>
+      </nav>
+    </section>
+
+    <section class="hidden testimonials">
+      <h2>Testimonials</h2>
+      <div class="testimonial-boxes">
+        <aside>
+          <h3>Akib Khan</h3>
+          <p>"The best tutoring experience I’ve ever had! Highly recommended."</p>
+        </aside>
+        <aside>
+          <h3>John Smith</h3>
+          <p>"Professional tutors and flexible timing really helped me excel."</p>
+        </aside>
+        <aside>
+          <h3>Malaika Nasir</h3>
+          <p>"Easy to book and very helpful sessions. 10/10!"</p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="hidden pricing">
+      <h2>Pricing</h2>
+      <p>Get quality tutoring starting at just <strong>£15/hour</strong>. Choose a plan that fits your needs.</p>
+    </section>
+  </main>
+
+  <footer>
+    <aside>
+      <img src="Assets/Images/logo.png" alt="Company logo" width="100" />
+      <p>Empowering learners everywhere with quality tutoring at your fingertips.</p>
+    </aside>
+    <aside>
+      <h3>Useful Links</h3>
+      <ul>
+        <li><a href="Subjects.html">Subjects</a></li>
+        <li><a href="About Us.html">About Us</a></li>
+        <li><a href="Contact Us.html">Contact Us</a></li>
+      </ul>
+    </aside>
+  </footer>
+
+  <script src="JS/Scripting.js"></script>
 </body>
 </html>
