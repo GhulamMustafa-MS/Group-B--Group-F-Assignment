@@ -13,6 +13,10 @@ body {
   overflow-x: hidden;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 .navbar {
   display: flex;
   flex-direction:  column;
@@ -49,35 +53,39 @@ body {
 }
 
 
-
 .subject-bar {
-  overflow-x: auto;
-  white-space: nowrap;
   padding: 10px 0;
-  -webkit-overflow-scrolling: touch; /* smooth scrolling on iOS */
+  width: 100%; /* Full width */
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center; /* Centers the content horizontally */
+  overflow: hidden; /* Prevents horizontal scrollbar */
 }
 
 .subject-list {
-  display: inline-flex;
+  display: flex;
   gap: 15px;
   list-style: none;
-  padding: 0 20px;
+  padding: 0;
   margin: 0;
+  flex-wrap: wrap; /* Allows wrapping when there is not enough space */
+  justify-content: center; /* Centers the list items */
 }
 
 .subject-list li {
-  flex: 0 0 auto;
+  flex: 1 1 auto; /* Makes each item flexible but avoids shrinking too much */
+  min-width: 120px; /* Ensures items are not too small */
+  max-width: 200px; /* Ensures items don't grow too large */
 }
 
 .subject-list a {
-  display: flex;
-  display: inline-block;
+  display: block;
   padding: 8px 16px;
   border-radius: 20px;
   background-color: #e0f0ff;
   color: #007BFF;
   font-weight: 600;
-  white-space: nowrap;
+  text-align: center; /* Centers text inside the link */
   transition: background-color 0.3s ease, color 0.3s ease;
   text-decoration: none;
 }
@@ -382,16 +390,16 @@ footer a:hover {
     position: relative;
     z-index: 10;
   }
-}
-.subject-list {
-  flex-direction: column;  /* Change to column for vertical layout on mobile */
-  align-items: center;
-  gap: 15px;
-  width: 100%;
-  padding: 0;
-  margin: 0;
-}
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+
+  .subject-list {
+    flex-direction: column;  /* Change to column for vertical layout on mobile */
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
   .subject-bar {
     padding: 10px;
     width: 100%;
