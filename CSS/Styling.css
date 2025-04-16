@@ -55,11 +55,11 @@ body {
 
 .subject-bar {
   padding: 10px 0;
-  width: 100%; /* Full width */
+  width: 100%;
   box-sizing: border-box;
   display: flex;
-  justify-content: center; /* Centers the content horizontally */
-  overflow: hidden; /* Prevents horizontal scrollbar */
+  justify-content: center;
+  overflow: hidden;
 }
 
 .subject-list {
@@ -68,14 +68,14 @@ body {
   list-style: none;
   padding: 0;
   margin: 0;
-  flex-wrap: wrap; /* Allows wrapping when there is not enough space */
-  justify-content: center; /* Centers the list items */
+  flex-wrap: wrap; 
+  justify-content: center;
 }
 
 .subject-list li {
-  flex: 1 1 auto; /* Makes each item flexible but avoids shrinking too much */
-  min-width: 120px; /* Ensures items are not too small */
-  max-width: 200px; /* Ensures items don't grow too large */
+  flex: 1 1 auto;
+  min-width: 120px;
+  max-width: 200px;
 }
 
 .subject-list a {
@@ -85,7 +85,7 @@ body {
   background-color: #e0f0ff;
   color: #007BFF;
   font-weight: 600;
-  text-align: center; /* Centers text inside the link */
+  text-align: center; 
   transition: background-color 0.3s ease, color 0.3s ease;
   text-decoration: none;
 }
@@ -392,7 +392,7 @@ footer a:hover {
   }
 
   .subject-list {
-    flex-direction: column;  /* Change to column for vertical layout on mobile */
+    flex-direction: column;
     align-items: center;
     gap: 15px;
     width: 100%;
