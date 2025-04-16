@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="../Assets/css/styles.css" />
+  <link rel="stylesheet" href="../Assets/css/Styling.css">
+  </head>
+  <body>
+<main>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <img src="../Assets/images/logo.png" alt="brand logo" class="nav-logo" />
+      <ul class="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="Pages/Subjects.html">Subjects</a></li>
+        <li><a href="aboutus.html">About us </a></li>
+        <li><a href="Pages/Contact Us.html" class="active">Contact Us</a></li>
+        <li><a href="Pages/Login.html">Login</a></li>
+        <li><a href="Pages/Registration.html">Register</a></li>
+      </ul>
+    </nav>
+    <!-- form -->
+  <div class="contact-con">
+    <div class="contact-container">
+    <h2>Contact Us</h2>
+    <p class="subtitle">We will get back to you asap!</p>
+    <form class="contact-form" id="contactForm">
+      <div class="input-group">
+        <img src="../Assets/images/Name.jpeg" alt="Name Icon" />
+        <input type="text" id="first-name" placeholder="First Name" required />
+        <input type="text" id="last-name"  placeholder="Last Name" required />
+      </div>
+      <div class="input-group">
+        <img src="../Assets/images/email.jpeg" alt="Email Icon" />
+        <input type="email" placeholder="Email" id="email" required />
+      </div>
+      <div class="input-group">
+        <img src="../Assets/images/call.jpeg" alt="Phone Icon" />
+        <input type="tel" placeholder="Phone" id="phone" required />
+      </div>
+      <div style="align-items:self-start;"> Select the subject you are interested in</div>
+
+      <div class="input-group">
+        <select name="subjects" id="subject" class="subjects">
+          <option value="English">English</option>
+          <option value="Mathematics">Mathematics</option>
+          <option value="Science">Science</option>
+          <option value="History">History</option>
+          <option value="Geography">Geography</option>
+          <option value="Computer Science">Computer Science</option>
+      </select>
+      <input type="tel" placeholder="Message" id="message"  required />
+
+      </div>
+      <button type="submit">Send</button>
+    </form>
+    <p class="footer-note">You may also call us at 333-33-33</p>
+  </div>
+  </div>
+
+  <!-- footer -->
+  <footer>
+    <aside>
+      <img src="../Assets/images/logo.png" alt="Company logo" width="100" />
+      <p>Empowering learners everywhere with quality tutoring at your fingertips.</p>
+    </aside>
+    <aside>
+      <h3>Useful Links</h3>
+      <ul>
+        <li><a href="Pages/Subjects.html">Subjects</a></li>
+        <li><a href="Pages/Aboutus.html"> About Us </a></li>              
+        <li><a href="Pages/Contact Us.html">Contact Us</a></li>
+      </ul>
+    </aside>
+  </footer>
+  <script>
+    // setCookie function
+    function setCookie(name, value, days) {
+      const expires = new Date(Date.now() + days * 864e5).toUTCString();
+      document.cookie = `${name}=${encodeURIComponent(value)}; expires=${expires}; path=/`;
+    }
+  
+    function validateForm(event) {
+      event.preventDefault();
+  
+      const firstName = document.getElementById("first-name").value.trim();
+      const lastName = document.getElementById("last-name").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const phone = document.getElementById("phone").value.trim();
+      const subject = document.getElementById("subject").value;
+      const message = document.getElementById("message").value.trim();
+      
+      // validating input fields
+      if (!firstName || !lastName || !email || !phone || !subject || !message) {
+        alert("Please fill out all fields.");
+        return;
+      }
+  
+      // Save to localStorage
+      localStorage.setItem("firstName", firstName);
+      localStorage.setItem("lastName", lastName);
+      localStorage.setItem("email", email);
+      localStorage.setItem("phone", phone);
+      localStorage.setItem("subject", subject);
+      localStorage.setItem("message", message);
+  
+      // Save to cookies
+      setCookie("firstName", firstName, 7);
+      setCookie("lastName", lastName, 7);
+      setCookie("email", email, 7);
+      setCookie("phone", phone, 7);
+      setCookie("subject", subject, 7);
+      setCookie("message", message, 7);
+  
+      alert("Form submitted successfully! Data saved in cookies and localStorage.");
+  
+      // Actually submit the form
+      document.getElementById("contactForm").submit();
+    }
+  
+    document.addEventListener("DOMContentLoaded", function () {
+      document.getElementById("contactForm").addEventListener("submit", validateForm);
+    });
+  </script>
+  
+  
+</body>
+</html>
+
+
